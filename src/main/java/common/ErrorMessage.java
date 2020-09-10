@@ -8,10 +8,7 @@ public enum ErrorMessage {
     hasNoThisPackageTR("Bu pakete sahip değilsin"),
     hasNoThisPackageEN("You don't have this package"),
     nullBodyTR("Boş içerik"),
-    nullBodyEN("Empty content")
-
-    ;
-
+    nullBodyEN("Empty content");
 
     String message;
     ErrorMessage(String message) {

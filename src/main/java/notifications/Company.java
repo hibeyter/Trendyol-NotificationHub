@@ -9,7 +9,6 @@ import interfaces.*;
 import interfaces.Package;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -28,7 +27,6 @@ public class Company implements Sender {
     private List<Double> invoices;
     private boolean isInBlackList=false;
 
-
     public Company() {
         language = new English();//Default language
         startingDate=new Date();
@@ -45,7 +43,6 @@ public class Company implements Sender {
 
     public void addInvoice(){
         if(isInBlackList) throw new CompanyIsInBlackListException(language.isInBlackList());
-
         invoices.add(calculateTotalAmount());
         newBillingCycle();
         if (invoices.size()>1) isInBlackList=true;

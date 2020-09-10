@@ -21,15 +21,12 @@ public class Email implements Channel {
     private User receiver;
     private String body;
 
-
     public void send() {
         if (body==null) throw new NullBodyException(sender.getLanguage().nullBody());
         if (sender.getEmailPackage()==null)
             throw new CompanyHasNotThisPackageException(sender.getLanguage().hasNotThisPackage());
-
         sender.getEmailPackage().increaseCount();
         System.out.println(body);
     }
-
 
 }

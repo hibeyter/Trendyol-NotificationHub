@@ -3,9 +3,6 @@ package models;
 
 import lombok.*;
 
-
-
-
 @Builder
 @Data
 public class PackageFeatures {
